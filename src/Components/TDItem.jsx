@@ -1,5 +1,10 @@
+import React, { useContext } from "react";
+import { ToDoTasks_Context } from "../Store/ToDoTasks-Context.jsx";
 import { MdDeleteOutline } from "react-icons/md";
-function TDItem({ task, date, deleteTask }) {
+function TDItem({ task, date }) {
+
+    const { deleteTask } = useContext(ToDoTasks_Context);
+
     return (
         <div className="row Kg-row">
             <div className="col-6">
